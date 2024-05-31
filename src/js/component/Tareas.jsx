@@ -4,24 +4,21 @@ const Tareas = () => {
     const [todos, setTodos] = useState([]);
     const [tareasValue, setTareasValue] = useState("");
 
-    const CreateAlert = () => {
-        alert('siguiente tarea')
-    }
+   
+    
     const agregarNuevaAlerta = () => {
         setTodos(todos.concat([tareasValue]))
         setTareasValue("")
         alert ("tarea guardada")
         
     }
-    const handleDelete = () => {
-        setTareasValue((prevState) =>{ 
-            tareasValue.filter(todo => todo != item)
-        })
+    const handleDelete = (index) => {
+        const newArray = [...todos]
+        newArray.splice(index,1)
+        setTodos(newArray)
+        }
         
-    }
-
-    console.log(todos);
-    return (
+        return (
 
         <div className="container">
             <h1>Todos</h1>
@@ -44,7 +41,7 @@ const Tareas = () => {
                             return (
                                 <li key={index}>{todo}
                                     
-                                    <i onClick={() => handleDelete(index)} className="fa-solid fa-x"></i>
+                                    <i onClick={() => handleDelete()} className="fa-solid fa-x"></i>
                                 </li>
                             )
                         })
