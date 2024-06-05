@@ -40,8 +40,8 @@ const Tareas = () => {
                         todos.map((todo, index) => {
                             return (
                                 <li key={index}>{todo}
-                                    
-                                    <i onClick={() => handleDelete()} className="fa-solid fa-x"></i>
+                                 
+                                    <i onClick={() => handleDelete()} className="fa-solid fa-x mt-2 me-1"></i>
                                 </li>
                             )
                         })

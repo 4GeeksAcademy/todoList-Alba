@@ -18,20 +18,30 @@ ul li{
     justify-content: space-between;
     border: solid 1px salmon;
 }
-/*ul li:hover{    
-    position: absolute;
-    border: black;
-    text-align: center;
-    
-}*/
+
 button{
     font-size: 15px;
     display: flex;
     justify-content: center;
     margin: auto;
+    transition-duration: 0.4s;
 }
 
-.fa-solid fa-x:hover{
-    position:relative;
+button:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+
+.fa-solid {
+    font-size: 10px;
+    transition-duration: 0.2s;
+    color: white;
+}
+
+.fa-solid:hover {
+  
+  color: rgb(248, 7, 7);
+  border-bottom: solid black;
 }
 
